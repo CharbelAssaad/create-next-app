@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getAccessToken, usePrivy } from "@privy-io/react-auth";
 import Head from "next/head";
+import LLMUserUpdateChat from "../components/LlmUserUpdateChat";
 
 async function verifyToken() {
 	const url = "/api/verify";
@@ -88,6 +89,7 @@ export default function DashboardPage() {
 				>
 					Log out
 				</button>
+				<LLMUserUpdateChat />
 			</main>
 		</>
 	);
